@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montasir Ahmed | Genetic Engineering & Biotechnology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            paper: '#f8f6f0',
+            paperCard: '#ffffff',
+            paperSurface: '#f1ede4',
+            charcoal: '#1a1a1a',
+            academicBlue: '#1e3a8a',
+            bronze: '#9a3412',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f6f0;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+    .glass-nav {
+      background: rgba(248, 246, 240, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+    }
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9a3412;
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      background: #ffffff;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(154, 52, 18, 0.4);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+    }
+    .skill-pill {
+      background: rgba(26, 26, 26, 0.03);
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      transition: all 0.2s ease;
+    }
+    .skill-pill:hover {
+      background: rgba(154, 52, 18, 0.08);
+      border-color: #9a3412;
+      color: #9a3412;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-amber-600 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="font-serif text-2xl font-bold tracking-wider text-charcoal">MA<span class="text-amber-700">.</span></a>
+      <ul class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-700">
+        <li><a href="#about" class="hover:text-amber-700 transition">About</a></li>
+        <li><a href="#education" class="hover:text-amber-700 transition">Education</a></li>
+        <li><a href="#experience" class="hover:text-amber-700 transition">Experience</a></li>
+        <li><a href="#skills" class="hover:text-amber-700 transition">Skills</a></li>
+        <li><a href="#publications" class="hover:text-amber-700 transition">Publications</a></li>
+        <li><a href="#conferences" class="hover:text-amber-700 transition">Conferences</a></li>
+        <li><a href="#courses" class="hover:text-amber-700 transition">Courses</a></li>
+        <li><a href="#gallery" class="hover:text-amber-700 transition">Gallery</a></li>
+        <li><a href="#contact" class="px-4 py-2 rounded-full bg-amber-700/10 text-amber-900 border border-amber-700/30 hover:bg-amber-700 hover:text-white transition font-medium">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-charcoal focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-paperSurface border-b border-zinc-300 px-6 py-4 space-y-3 text-sm">
+      <a href="#about" class="block py-1 text-slate-700 hover:text-amber-700">About</a>
+      <a href="#education" class="block py-1 text-slate-700 hover:text-amber-700">Education</a>
+      <a href="#experience" class="block py-1 text-slate-700 hover:text-amber-700">Experience</a>
+      <a href="#skills" class="block py-1 text-slate-700 hover:text-amber-700">Skills</a>
+      <a href="#publications" class="block py-1 text-slate-700 hover:text-amber-700">Publications</a>
+      <a href="#conferences" class="block py-1 text-slate-700 hover:text-amber-700">Conferences</a>
+      <a href="#courses" class="block py-1 text-slate-700 hover:text-amber-700">Courses</a>
+      <a href="#gallery" class="block py-1 text-slate-700 hover:text-amber-700">Gallery</a>
+      <a href="#contact" class="block py-1 text-amber-800 font-semibold">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen pt-28 pb-20 flex items-center overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 relative z-10 w-full">
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+        <!-- Profile Photo -->
+        <div class="md:col-span-4 flex justify-center">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-tr from-amber-700 to-amber-900 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+            <div class="relative w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden bg-white border border-zinc-300 shadow-xl">
+              <img src="profile.jpeg" alt="Montasir Ahmed" onerror="this.src='https://placehold.co/600x800/ffffff/1a1a1a?text=profile.jpeg'" class="w-full h-full object-cover object-top" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Intro -->
+        <div class="md:col-span-8 text-center md:text-left">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber-800 mb-3 font-semibold">M.Sc. Thesis Student · Researcher · Innovator</p>
+          <h1 class="font-serif text-5xl md:text-7xl font-bold text-charcoal tracking-tight mb-4">Montasir Ahmed</h1>
+          <p class="text-xl text-slate-700 font-light mb-2">Genetic Engineering &amp; Biotechnology</p>
+          <p class="text-sm text-slate-600 mb-6">Molecular Biology and Protein Science Laboratory (MBPSL) · University of Rajshahi, Bangladesh</p>
+          <p class="italic font-serif text-lg text-slate-700 max-w-2xl mb-6">
+            "Advancing recombinant protein therapeutics, low-cost molecular diagnostics, and computational drug discovery."
+          </p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-2 text-xs font-mono text-amber-900 mb-8">
+            <span class="px-3 py-1.5 rounded-md bg-amber-100/70 border border-amber-300">Recombinant DNA Technology</span>
+            <span class="px-3 py-1.5 rounded-md bg-amber-100/70 border border-amber-300">Molecular Diagnostics R&amp;D</span>
+            <span class="px-3 py-1.5 rounded-md bg-amber-100/70 border border-amber-300">Bioinformatics &amp; Nanomedicine</span>
+          </div>
+
+          <!-- Social & Academic Links -->
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+            <a href="https://www.linkedin.com/in/montasir-ahmed-b474822aa" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-800 text-sm border border-zinc-300 shadow-sm transition">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.researchgate.net/profile/Montasir-Ahmed-7" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-800 text-sm border border-zinc-300 shadow-sm transition">
+              <span>ResearchGate</span>
+            </a>
+            <a href="mailto:amontasir24@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-800 text-sm border border-zinc-300 shadow-sm transition">
+              <span>Email Me</span>
+            </a>
+          </div>
+
+          <div class="flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="#publications" class="px-6 py-3 rounded-lg bg-charcoal hover:bg-zinc-800 text-white font-semibold text-sm transition shadow-md">Explore Research</a>
+            <a href="#contact" class="px-6 py-3 rounded-lg border border-zinc-400 hover:border-amber-800 text-zinc-800 hover:text-amber-800 font-medium text-sm transition bg-white/50">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 00 About -->
+  <section id="about" class="py-24 bg-paperSurface border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">00 — About</p>
+      <div class="grid md:grid-cols-12 gap-12 items-start mt-6">
+        <div class="md:col-span-5 bg-paperCard p-6 rounded-2xl border border-zinc-200 shadow-sm space-y-4 text-sm">
+          <div class="flex justify-between py-2 border-b border-zinc-100">
+            <span class="text-slate-500">Location</span>
+            <span class="text-zinc-900 font-medium">Rajshahi, Bangladesh</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-zinc-100">
+            <span class="text-slate-500">Current Status</span>
+            <span class="text-amber-800 font-medium">M.Sc. Thesis Student (Ongoing)</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-zinc-100">
+            <span class="text-slate-500">B.Sc. CGPA</span>
+            <span class="text-zinc-900 font-semibold">3.85 / 4.00</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-zinc-100">
+            <span class="text-slate-500">Laboratory</span>
+            <span class="text-zinc-900 font-medium">MBPSL, Univ. of Rajshahi</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-zinc-100">
+            <span class="text-slate-500">Email</span>
+            <a href="mailto:amontasir24@gmail.com" class="text-amber-800 hover:underline">amontasir24@gmail.com</a>
+          </div>
+          <div class="flex justify-between py-2">
+            <span class="text-slate-500">Phone</span>
+            <a href="tel:+8801842774805" class="text-zinc-900 hover:text-amber-800">+880 1842 774805</a>
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">Biotechnology Researcher &amp; Molecular Kit Innovator</h2>
+          <p class="text-slate-700 leading-relaxed mb-4">
+            A Biotechnology graduate with a strong academic background in Genetic Engineering and molecular biology. Experienced in recombinant DNA technology, gene expression analysis, sequencing-related techniques, and molecular biology research.
+          </p>
+          <p class="text-slate-700 leading-relaxed">
+            Currently engaged as a thesis student in the <strong>Molecular Biology and Protein Science Laboratory (MBPSL)</strong> at the University of Rajshahi, Bangladesh, and serving on the Research &amp; Development team at <strong>MBPSL iHub</strong> to commercialize indigenous, low-cost molecular biology kits and enzymes to make scientific research more accessible across Bangladesh.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 Education -->
+  <section id="education" class="py-24 border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">01 — Education</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-12">Academic <em class="font-normal text-amber-800">Journey</em></h2>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-amber-800 before:via-zinc-400 before:to-zinc-200">
+        <!-- MSc -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-amber-800 bg-white text-amber-900 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm">
+            🎓
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-paperCard p-6 rounded-2xl card-hover">
+            <span class="font-mono text-xs text-amber-800 font-semibold">2026 — Current</span>
+            <h3 class="text-xl font-bold text-charcoal mt-1">Master of Science (M.Sc.) in Genetic Engineering and Biotechnology</h3>
+            <p class="text-sm text-slate-600 mt-1">Molecular Biology and Protein Science Laboratory (MBPSL), University of Rajshahi, Bangladesh</p>
+            <div class="mt-4 p-3 rounded-lg bg-paperSurface border border-zinc-200 text-sm">
+              <span class="text-xs font-mono uppercase text-amber-900 font-semibold block mb-1">Thesis Title</span>
+              <p class="text-zinc-800">Therapeutic Potential of a Recombinant Protein in Enhancing TLR5-Mediated Host Defense Against a Multidrug-Resistant Bacterium</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4 text-xs font-mono text-slate-600">
+              <span class="px-2.5 py-1 rounded bg-zinc-100 border border-zinc-200">Recombinant Protein</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-100 border border-zinc-200">TLR5 Host Defense</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-100 border border-zinc-200">MDR Bacteria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BSc -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-zinc-400 bg-white text-zinc-700 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm">
+            📘
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-paperCard p-6 rounded-2xl card-hover">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-amber-800 font-semibold">2022 — 2025</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300">CGPA: 3.85 / 4.00</span>
+            </div>
+            <h3 class="text-xl font-bold text-charcoal mt-1">Bachelor of Science (B.Sc.) in Genetic Engineering and Biotechnology</h3>
+            <p class="text-sm text-slate-600 mt-1">University of Rajshahi, Bangladesh</p>
+            <div class="mt-4 space-y-3 text-sm">
+              <div class="p-3 rounded-lg bg-paperSurface border border-zinc-200">
+                <span class="text-xs font-mono uppercase text-amber-900 font-semibold block mb-1">Research Project 1 (Wet Lab &amp; In Vivo)</span>
+                <p class="text-zinc-800">Anticancer Effects of Green Synthesized Copper Nanoparticles from <em>Nigella Sativa</em> Seed extract against Ehrlich Ascites Carcinoma (EAC) cell line</p>
+              </div>
+              <div class="p-3 rounded-lg bg-paperSurface border border-zinc-200">
+                <span class="text-xs font-mono uppercase text-amber-900 font-semibold block mb-1">Research Project 2 (In Silico)</span>
+                <p class="text-zinc-800">Computational Exploration of Antidiabetic Phytochemicals from <em>Solanum sisymbriifolium</em> Fruit Extract Targeting Allosteric Inhibition of PTP 1B</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Work Experience & Internships -->
+  <section id="experience" class="py-24 bg-paperSurface border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">02 — Experience &amp; Internships</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-12">Research &amp; <em class="font-normal text-amber-800">Professional Roles</em></h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <!-- R&D -->
+        <div class="bg-paperCard p-6 rounded-2xl card-hover">
+          <div class="flex justify-between items-start gap-4 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-charcoal">Research and Development Team Member</h3>
+              <p class="text-amber-800 text-sm font-medium">MBPSL iHub, University of Rajshahi</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300 shrink-0">Sep 2026 — Present</span>
+          </div>
+          <ul class="space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Contributed to the development and commercialization of low-cost molecular biology kits under the supervision of MBPSL iHub.</li>
+            <li>Worked on DNA Extraction, RNA Extraction, Plasmid Extraction, PCR Gel Purification kits, DNA Ladder, and BSA products.</li>
+            <li>Contributed to product optimization, validation, documentation, and commercialization planning.</li>
+            <li>Currently working toward indigenous development of DNA Polymerase and PCR Master Mix.</li>
+          </ul>
+        </div>
+
+        <!-- TA -->
+        <div class="bg-paperCard p-6 rounded-2xl card-hover">
+          <div class="flex justify-between items-start gap-4 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-charcoal">Teaching Assistant (TA)</h3>
+              <p class="text-amber-800 text-sm font-medium">Scienspur Foundation · Molecular Genetics Course</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300 shrink-0">Jun 2026 — Present</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed mb-4">
+            Serving as a Teaching Assistant for the Molecular Genetics Course at Scienspur Foundation, contributing to student learning, academic engagement, and collaborative scientific education.
+          </p>
+          <div class="p-3 rounded-lg bg-paperSurface border border-zinc-200 text-xs text-slate-600">
+            <strong class="text-zinc-900 block mb-1">Volunteering Highlight:</strong>
+            Bangladesh National Biology Olympiad — Performed the role of an Enzyme, enhancing students' interest in participating in the Bangladesh Biology Olympiad.
+          </div>
+        </div>
+      </div>
+
+      <h3 class="font-serif text-2xl font-bold text-charcoal mb-6">Research Internships</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-paperCard p-5 rounded-xl card-hover">
+          <span class="font-mono text-xs text-amber-800 font-semibold">May — Oct 2024</span>
+          <h4 class="text-base font-bold text-charcoal mt-1">Research Intern</h4>
+          <p class="text-xs text-slate-500 mb-3">Molecular Biology and Protein Science Laboratory (MBPSL)</p>
+          <p class="text-xs text-slate-700"><strong>Project:</strong> Recombinant Production of Taq DNA Polymerase and Cost-Effective Custom DNA Ladder formulation.</p>
+        </div>
+
+        <div class="bg-paperCard p-5 rounded-xl card-hover">
+          <span class="font-mono text-xs text-amber-800 font-semibold">Sep — Nov 2024</span>
+          <h4 class="text-base font-bold text-charcoal mt-1">Intern, Python Programming</h4>
+          <p class="text-xs text-slate-500 mb-3">EDGE Project, Bangladesh Computer Council, Ministry of Education</p>
+          <p class="text-xs text-slate-700">Trained in Python scripting, data processing, and computational problem-solving under the Enhancing Digital Government &amp; Economy initiative.</p>
+        </div>
+
+        <div class="bg-paperCard p-5 rounded-xl card-hover">
+          <span class="font-mono text-xs text-amber-800 font-semibold">Mar — Apr 2023</span>
+          <h4 class="text-base font-bold text-charcoal mt-1">Bioinformatics Intern</h4>
+          <p class="text-xs text-slate-500 mb-3">BioPC — A Bioinformatics Lab of Research and Training</p>
+          <p class="text-xs text-slate-700">Hands-on training in in-silico drug design, molecular docking workflows, and biological database analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Skills -->
+  <section id="skills" class="py-24 border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">03 — Technical Arsenal</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-12">Laboratory &amp; <em class="font-normal text-amber-800">Computational Skills</em></h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Molecular & Genetic Engineering -->
+        <div class="bg-paperCard p-6 rounded-2xl card-hover md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🧬</span>
+            <h3 class="text-lg font-bold text-charcoal">Molecular Biology &amp; Wet-Lab Techniques</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs text-slate-700">
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Recombinant Protein Expression</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Genetic Mutation Detection</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Gene Expression Analysis</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Plasmid Cloning</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">RT-qPCR</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Sanger Sequencing</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Restriction Digestion</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Ligation</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">SDS-PAGE</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Bacterial Transformation</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Competent Cell Preparation</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">RNA Extraction</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Plasmid Extraction</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">DNA Extraction</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">cDNA Synthesis</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Apoptosis Detection (DAPI)</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Optical Microscopy</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Column Chromatography</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Bradford Protein Assay</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Bacteria Isolation</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Antimicrobial Testing</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Mice Handling &amp; Dissection</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Microbiology</span>
+          </div>
+        </div>
+
+        <!-- Computational & Software -->
+        <div class="bg-paperCard p-6 rounded-2xl card-hover">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">💻</span>
+            <h3 class="text-lg font-bold text-charcoal">Software &amp; Extracurricular</h3>
+          </div>
+          <p class="text-xs font-mono uppercase text-amber-800 font-semibold mb-2">Bioinformatics &amp; Data Analysis</p>
+          <div class="flex flex-wrap gap-2 text-xs text-slate-700 mb-5">
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Python</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">GraphPad Prism</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">PyRx</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">PyMOL</span>
+          </div>
+          <p class="text-xs font-mono uppercase text-amber-800 font-semibold mb-2">Productivity &amp; Leadership</p>
+          <div class="flex flex-wrap gap-2 text-xs text-slate-700">
+            <span class="skill-pill px-3 py-1.5 rounded-lg">MS Word</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">MS PowerPoint</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">MS Excel</span>
+            <span class="skill-pill px-3 py-1.5 rounded-lg">Competitive Debate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Publications -->
+  <section id="publications" class="py-24 bg-paperSurface border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">04 — Publications</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-12">Scientific <em class="font-normal text-amber-800">Output</em></h2>
+
+      <div class="bg-paperCard p-6 md:p-8 rounded-2xl card-hover flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+        <div class="space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">Published · Springer (Biologia) · 2025</span>
+          </div>
+          <h3 class="text-xl font-bold text-charcoal leading-snug">
+            <a href="https://link.springer.com/article/10.1007/s11756-025-01953-0" target="_blank" rel="noopener" class="hover:text-amber-800 transition">
+              Biofilms: mechanisms, quorum sensing, antibiotic resistance, and implications in the food industry
+            </a>
+          </h3>
+          <p class="text-xs text-slate-500 font-mono">DOI: 10.1007/s11756-025-01953-0</p>
+        </div>
+        <a href="https://link.springer.com/article/10.1007/s11756-025-01953-0" target="_blank" rel="noopener" class="shrink-0 px-5 py-2.5 rounded-lg bg-amber-800 hover:bg-amber-900 text-white text-sm font-medium transition shadow-sm">
+          Read on Springer →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Conferences -->
+  <section id="conferences" class="py-24 border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">05 — Conferences &amp; Summits</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-12">National &amp; International <em class="font-normal text-amber-800">Presentations</em></h2>
+
+      <div class="space-y-6">
+        <div class="bg-paperCard p-6 rounded-2xl card-hover">
+          <span class="font-mono text-xs text-amber-800 font-semibold">2026 · Ministry of Science and Technology, Bangladesh</span>
+          <h3 class="text-xl font-bold text-charcoal mt-1">Bangladesh National Innovation Fair 2026</h3>
+          <p class="text-sm text-slate-700 mt-2">Represented the University of Rajshahi and MBPSL iHub, showcasing institutional innovation, indigenous DNA/RNA/Plasmid extraction kits, and research initiatives.</p>
+        </div>
+
+        <div class="bg-paperCard p-6 rounded-2xl card-hover">
+          <span class="font-mono text-xs text-amber-800 font-semibold">25 April 2026 · University of Dhaka, Bangladesh</span>
+          <h3 class="text-xl font-bold text-charcoal mt-1">Future Biotechnologist Summit &amp; 6th National Young Biotechnologists Congress on Omics &amp; AI 2026</h3>
+          <p class="text-sm text-slate-700 mt-2"><strong>Role:</strong> Co-Presenting Author (Poster Presentation) — <em>"Anticancer Effects of Green Synthesized Copper Nanoparticles from Nigella Sativa Seed extract against Ehrlich Ascites Carcinoma (EAC) cell line"</em>.</p>
+        </div>
+
+        <div class="bg-paperCard p-6 rounded-2xl card-hover">
+          <span class="font-mono text-xs text-amber-800 font-semibold">2025 · University of Rajshahi</span>
+          <h3 class="text-xl font-bold text-charcoal mt-1">Rajshahi University Education Club (RUEC) International Conference 2025</h3>
+          <p class="text-xs text-slate-500">Theme: Advancing Knowledge and Innovation Across Disciplines for Social Transformation</p>
+          <p class="text-sm text-slate-700 mt-2"><strong>Role:</strong> Presenting Author (Poster Presentation) — <em>"Computational Exploration of Antidiabetic Phytochemicals from Solanum sisymbriifolium Fruit Extract Targeting Allosteric Inhibition of PTP 1B"</em>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Courses & Workshops -->
+  <section id="courses" class="py-24 bg-paperSurface border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">06 — Training &amp; Certifications</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-12">Courses &amp; <em class="font-normal text-amber-800">Workshops</em></h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Courses -->
+        <div class="space-y-4">
+          <h3 class="font-mono text-sm uppercase tracking-wider text-amber-800 font-semibold mb-4">Completed Courses</h3>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Developmental Biology (SW2401), Cell Biology (SF2401), Basic Molecular Genetics (SS2501), &amp; Advanced Molecular Genetics (SS2502)</p>
+            <p class="text-xs text-slate-500 mt-1">Scienspur</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Bioinformatics for Biologists: Analyzing and Interpreting Genomics Datasets</p>
+            <p class="text-xs text-slate-500 mt-1">FutureLearn</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Cancer Bioinformatics</p>
+            <p class="text-xs text-slate-500 mt-1">CHIRAL Bangladesh</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Python Programming Course</p>
+            <p class="text-xs text-slate-500 mt-1">UniAthena</p>
+          </div>
+        </div>
+
+        <!-- Workshops -->
+        <div class="space-y-4">
+          <h3 class="font-mono text-sm uppercase tracking-wider text-amber-800 font-semibold mb-4">Workshops &amp; Camps</h3>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Antimicrobial Resistance: The Miracles within Miracle Drugs</p>
+            <p class="text-xs text-slate-500 mt-1">Conducted by Prof. Dr. Brenda Anne Wilson · American Society for Microbiology (ASM)</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">AMR and its Mitigation Strategies</p>
+            <p class="text-xs text-slate-500 mt-1">University of Illinois Urbana-Champaign</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Workshop on RT-qPCR</p>
+            <p class="text-xs text-slate-500 mt-1">Bio-Rad Laboratories</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Oligonucleotide Antibody-Pair-Based Proteomics in Cancer Cell Lines</p>
+            <p class="text-xs text-slate-500 mt-1">Labroots</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">Enzymology with the PDB: From Pandemic to Paxlovid</p>
+            <p class="text-xs text-slate-500 mt-1">RCSB Protein Data Bank</p>
+          </div>
+          <div class="bg-paperCard p-4 rounded-xl border border-zinc-200 shadow-sm">
+            <p class="font-semibold text-charcoal text-sm">RUSC Environment Camp</p>
+            <p class="text-xs text-slate-500 mt-1">Rajshahi University Science Club — Climate literacy &amp; ecological awareness</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Gallery -->
+  <section id="gallery" class="py-24 border-t border-zinc-300/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-tag mb-2">07 — Moments &amp; Highlights</p>
+      <h2 class="font-serif text-4xl font-bold text-charcoal mb-4">Conferences &amp; <em class="font-normal text-amber-800">Innovation Gallery</em></h2>
+      <p class="text-sm text-slate-600 mb-10">Highlights from national innovation fairs, scientific congresses, and poster presentations.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Photo 1 -->
+        <figure class="bg-paperCard rounded-2xl overflow-hidden card-hover cursor-pointer group" onclick="openLightbox(this)">
+          <div class="h-56 overflow-hidden bg-zinc-200">
+            <img src="Innovation-1.jpeg" alt="MBPSL Lab Demonstration" onerror="this.src='https://placehold.co/600x400/ffffff/1a1a1a?text=Innovation-1.jpeg'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <figcaption class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-semibold">Innovation Fair 2026</span>
+            <strong class="block text-charcoal font-semibold mt-1">MBPSL iHub Kit Demonstration</strong>
+            <span class="text-xs text-slate-500 mt-1 block">Presenting low-cost molecular biology kits developed at the Molecular Biology and Protein Science Laboratory.</span>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 2 -->
+        <figure class="bg-paperCard rounded-2xl overflow-hidden card-hover cursor-pointer group" onclick="openLightbox(this)">
+          <div class="h-56 overflow-hidden bg-zinc-200">
+            <img src="Innovation-2.jpeg" alt="Bangladesh National Innovation Fair 2026 Team" onerror="this.src='https://placehold.co/600x400/ffffff/1a1a1a?text=Innovation-2.jpeg'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <figcaption class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-semibold">Innovation Fair 2026</span>
+            <strong class="block text-charcoal font-semibold mt-1">MBPSL iHub Pavilion Team</strong>
+            <span class="text-xs text-slate-500 mt-1 block">Representing the University of Rajshahi at the Bangladesh National Innovation Fair 2026 organized by the Ministry of Science and Technology.</span>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 3 -->
+        <figure class="bg-paperCard rounded-2xl overflow-hidden card-hover cursor-pointer group" onclick="openLightbox(this)">
+          <div class="h-56 overflow-hidden bg-zinc-200">
+            <img src="Innovation-3.jpeg" alt="Showcasing Blood DNA Extraction Kit" onerror="this.src='https://placehold.co/600x400/ffffff/1a1a1a?text=Innovation-3.jpeg'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <figcaption class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-semibold">Product Launch</span>
+            <strong class="block text-charcoal font-semibold mt-1">Blood DNA Extraction Kit Showcase</strong>
+            <span class="text-xs text-slate-500 mt-1 block">Highlighting our indigenous silica spin-column extraction kits at the Pioneer Launch pavilion.</span>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 4 -->
+        <figure class="bg-paperCard rounded-2xl overflow-hidden card-hover cursor-pointer group" onclick="openLightbox(this)">
+          <div class="h-56 overflow-hidden bg-zinc-200">
+            <img src="ruec-2025.jpeg" alt="RUEC International Conference 2025 Poster Presentation" onerror="this.src='https://placehold.co/600x400/ffffff/1a1a1a?text=ruec-2025.jpeg'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <figcaption class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-semibold">Poster Presentation · 2025</span>
+            <strong class="block text-charcoal font-semibold mt-1">RUEC International Conference 2025</strong>
+            <span class="text-xs text-slate-500 mt-1 block">Presenting Author on computational exploration of antidiabetic phytochemicals from Solanum sisymbriifolium fruit extract.</span>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 5 -->
+        <figure class="bg-paperCard rounded-2xl overflow-hidden card-hover cursor-pointer group" onclick="openLightbox(this)">
+          <div class="h-56 overflow-hidden bg-zinc-200">
+            <img src="summit-1.jpeg" alt="Future Biotechnologist Summit 2026" onerror="this.src='https://placehold.co/600x400/ffffff/1a1a1a?text=summit-1.jpeg'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <figcaption class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-semibold">University of Dhaka · 2026</span>
+            <strong class="block text-charcoal font-semibold mt-1">Future Biotechnologists Summit 2026</strong>
+            <span class="text-xs text-slate-500 mt-1 block">Participating as Co-Presenting Author at the 6th International Young Biotechnologists Congress on Omics &amp; AI.</span>
+          </figcaption>
+        </figure>
+
+        <!-- Photo 6 -->
+        <figure class="bg-paperCard rounded-2xl overflow-hidden card-hover cursor-pointer group" onclick="openLightbox(this)">
+          <div class="h-56 overflow-hidden bg-zinc-200">
+            <img src="summit-2.jpeg" alt="Congress Session at University of Dhaka" onerror="this.src='https://placehold.co/600x400/ffffff/1a1a1a?text=summit-2.jpeg'" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <figcaption class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-semibold">Scientific Session · 2026</span>
+            <strong class="block text-charcoal font-semibold mt-1">6th NYBB Congress Panel</strong>
+            <span class="text-xs text-slate-500 mt-1 block">Engaging in scientific discussions on Omics &amp; AI at Nawab Ali Chowdhury Senate Bhaban, University of Dhaka.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="max-w-4xl w-full bg-white border border-zinc-300 rounded-2xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" class="w-full max-h-[75vh] object-contain bg-zinc-100" />
+      <div class="p-4 flex justify-between items-center bg-white">
+        <p id="lightbox-caption" class="text-sm text-charcoal font-medium"></p>
+        <button onclick="closeLightbox()" class="px-4 py-1.5 rounded bg-zinc-200 text-zinc-800 hover:bg-zinc-300 text-xs font-semibold">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 Contact -->
+  <section id="contact" class="py-24 bg-paperSurface border-t border-zinc-300/60">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="section-tag mb-2">08 — Contact</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-charcoal mb-6">Get In <em class="font-normal text-amber-800">Touch</em></h2>
+      <p class="text-slate-700 max-w-xl mx-auto mb-10">
+        Open to research collaborations, graduate opportunities, and discussions in molecular biology, recombinant protein therapeutics, diagnostic kit development, and bioinformatics.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:amontasir24@gmail.com" class="px-6 py-3.5 rounded-xl bg-charcoal hover:bg-zinc-800 text-white font-semibold text-sm transition shadow-sm">
+          ✉ amontasir24@gmail.com
+        </a>
+        <a href="tel:+8801842774805" class="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-300 text-sm font-medium transition shadow-sm">
+          📞 +880 1842 774805
+        </a>
+        <a href="https://www.linkedin.com/in/montasir-ahmed-b474822aa" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-300 text-sm font-medium transition shadow-sm">
+          LinkedIn Profile ↗
+        </a>
+        <a href="https://www.researchgate.net/profile/Montasir-Ahmed-7" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-300 text-sm font-medium transition shadow-sm">
+          ResearchGate ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-zinc-300/60 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>
+        <span class="font-serif text-base font-bold text-zinc-800">Montasir Ahmed</span> · Genetic Engineering &amp; Biotechnology, University of Rajshahi
+      </div>
+      <div>© 2026 Montasir Ahmed. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Lightbox functions
+    function openLightbox(figureEl) {
+      const img = figureEl.querySelector('img');
+      const title = figureEl.querySelector('strong').innerText;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-caption').innerText = title;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
