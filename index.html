@@ -186,38 +186,90 @@
 </head>
 <body class="antialiased selection:bg-amber-600 selection:text-white">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="font-serif text-2xl font-bold tracking-wider text-charcoal">MA<span class="text-amber-700">.</span></a>
-      <ul class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-700">
-        <li><a href="#about" class="hover:text-amber-700 transition">About</a></li>
-        <li><a href="#education" class="hover:text-amber-700 transition">Education</a></li>
-        <li><a href="#experience" class="hover:text-amber-700 transition">Experience</a></li>
-        <li><a href="#skills" class="hover:text-amber-700 transition">Skills</a></li>
-        <li><a href="#publications" class="hover:text-amber-700 transition">Publications</a></li>
-        <li><a href="#conferences" class="hover:text-amber-700 transition">Conferences</a></li>
-        <li><a href="#courses" class="hover:text-amber-700 transition">Courses</a></li>
-        <li><a href="#gallery" class="hover:text-amber-700 transition">Gallery</a></li>
-        <li><a href="#contact" class="px-4 py-2 rounded-full bg-amber-700/10 text-amber-900 border border-amber-700/30 hover:bg-amber-700 hover:text-white transition font-medium">Contact</a></li>
-      </ul>
-      <button id="menu-btn" class="md:hidden text-charcoal focus:outline-none" aria-label="Toggle Menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-paperSurface border-b border-zinc-300 px-6 py-4 space-y-3 text-sm">
-      <a href="#about" class="block py-1 text-slate-700 hover:text-amber-700">About</a>
-      <a href="#education" class="block py-1 text-slate-700 hover:text-amber-700">Education</a>
-      <a href="#experience" class="block py-1 text-slate-700 hover:text-amber-700">Experience</a>
-      <a href="#skills" class="block py-1 text-slate-700 hover:text-amber-700">Skills</a>
-      <a href="#publications" class="block py-1 text-slate-700 hover:text-amber-700">Publications</a>
-      <a href="#conferences" class="block py-1 text-slate-700 hover:text-amber-700">Conferences</a>
-      <a href="#courses" class="block py-1 text-slate-700 hover:text-amber-700">Courses</a>
-      <a href="#gallery" class="block py-1 text-slate-700 hover:text-amber-700">Gallery</a>
-      <a href="#contact" class="block py-1 text-amber-800 font-semibold">Contact</a>
-    </div>
-  </nav>
+ 
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="font-serif text-2xl font-bold tracking-wider text-[#172D46]">
+      MA<span class="text-[#A9BBC5]">.</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden md:flex items-center space-x-6 text-sm font-medium text-[#52677E]">
+
+      <li><a href="#about" class="hover:text-[#172D46] transition">About</a></li>
+
+      <li><a href="#education" class="hover:text-[#172D46] transition">Education</a></li>
+
+      <li><a href="#research-interests" class="hover:text-[#172D46] transition">Research Interests</a></li>
+
+      <li><a href="#experience" class="hover:text-[#172D46] transition">Experience</a></li>
+
+      <li><a href="#skills" class="hover:text-[#172D46] transition">Skills</a></li>
+
+      <li><a href="#publications" class="hover:text-[#172D46] transition">Publications</a></li>
+
+      <li><a href="#conferences" class="hover:text-[#172D46] transition">Conferences</a></li>
+
+      <li><a href="#courses" class="hover:text-[#172D46] transition">Courses</a></li>
+
+      <li><a href="#gallery" class="hover:text-[#172D46] transition">Gallery</a></li>
+
+      <li>
+        <a href="#contact"
+          class="px-4 py-2 rounded-full bg-[#172D46]/10
+          text-[#172D46] border border-[#172D46]/30
+          hover:bg-[#172D46] hover:text-white transition font-medium">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn"
+      class="md:hidden text-[#172D46] focus:outline-none"
+      aria-label="Toggle Menu">
+
+      <svg class="w-6 h-6" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu"
+    class="hidden md:hidden bg-[#EDEFEA]
+    border-b border-[#D2DCE0] px-6 py-4
+    space-y-3 text-sm">
+
+    <a href="#about" class="block py-1 text-[#52677E] hover:text-[#172D46]">About</a>
+
+    <a href="#education" class="block py-1 text-[#52677E] hover:text-[#172D46]">Education</a>
+
+    <a href="#research-interests" class="block py-1 text-[#172D46] font-semibold">Research Interests</a>
+
+    <a href="#experience" class="block py-1 text-[#52677E] hover:text-[#172D46]">Experience</a>
+
+    <a href="#skills" class="block py-1 text-[#52677E] hover:text-[#172D46]">Skills</a>
+
+    <a href="#publications" class="block py-1 text-[#52677E] hover:text-[#172D46]">Publications</a>
+
+    <a href="#conferences" class="block py-1 text-[#52677E] hover:text-[#172D46]">Conferences</a>
+
+    <a href="#courses" class="block py-1 text-[#52677E] hover:text-[#172D46]">Courses</a>
+
+    <a href="#gallery" class="block py-1 text-[#52677E] hover:text-[#172D46]">Gallery</a>
+
+    <a href="#contact" class="block py-1 text-[#172D46] font-semibold">Contact</a>
+
+  </div>
+</nav>
 
   
 <!-- PREMIUM HERO SECTION -->
